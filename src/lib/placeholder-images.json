@@ -1,3 +1,118 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "home-hero-3d",
+      "description": "3D illustration of the BeRegen ecosystem node with orbiting elements.",
+      "imageUrl": "https://images.unsplash.com/photo-1760710464165-6bd943b8fa44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMGVjb3N5c3RlbXxlbnwwfHx8fDE3NjE2NzE4Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract ecosystem"
+    },
+    {
+      "id": "app-mockup-mobile",
+      "description": "A mockup of the BeRegen mobile app on a smartphone.",
+      "imageUrl": "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzYxNjExOTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "app-screen-1",
+      "description": "Screenshot of the BeRegen app feature 1.",
+      "imageUrl": "https://images.unsplash.com/photo-1761305135230-a626d3c8d0a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhcHAlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzYxNjY5NzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app interface"
+    },
+    {
+      "id": "app-screen-2",
+      "description": "Screenshot of the BeRegen app feature 2.",
+      "imageUrl": "https://images.unsplash.com/photo-1613347761493-4060c969cd28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXNoYm9hcmQlMjBhbmFseXRpY3N8ZW58MHx8fHwxNzYxNTgxMjIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard analytics"
+    },
+    {
+      "id": "app-screen-3",
+      "description": "Screenshot of the BeRegen app feature 3.",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx1c2VyJTIwcHJvZmlsZXxlbnwwfHx8fDE3NjE2Njg0Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "user profile"
+    },
+    {
+      "id": "update-post-1",
+      "description": "Thumbnail for the first blog post.",
+      "imageUrl": "https://images.unsplash.com/photo-1661884438136-056ec19f145c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXR1cmUlMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc2MTY3MTgyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nature technology"
+    },
+    {
+      "id": "update-post-2",
+      "description": "Thumbnail for the second blog post.",
+      "imageUrl": "https://images.unsplash.com/photo-1565813086292-604790c8a97b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21tdW5pdHklMjBtZWV0aW5nfGVufDB8fHx8MTc2MTU2NDQ2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community meeting"
+    },
+    {
+      "id": "update-post-3",
+      "description": "Thumbnail for the third blog post.",
+      "imageUrl": "https://images.unsplash.com/photo-1495395226200-8fbf6b720b8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zm9yZXN0JTIwcGF0aHxlbnwwfHx8fDE3NjE2MTIzOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "forest path"
+    },
+    {
+      "id": "team-member-1",
+      "description": "Photo of a team member.",
+      "imageUrl": "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjE2Mzk1ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "team-member-2",
+      "description": "Photo of a team member.",
+      "imageUrl": "https://images.unsplash.com/photo-1544168190-79c17527004f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYxNjM5NTg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "team-member-3",
+      "description": "Photo of a team member.",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjE2Mzk1ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "team-member-4",
+      "description": "Photo of a team member.",
+      "imageUrl": "https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjE2Mzk1ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "flix-teaser",
+      "description": "Teaser video thumbnail for RegenFlix.",
+      "imageUrl": "https://images.unsplash.com/photo-1628015893937-9313b7a7bdee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaW5lbWF0aWMlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzYxNjA4NzQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cinematic landscape"
+    },
+    {
+      "id": "store-product-1",
+      "description": "Image of a product from RegenStore.",
+      "imageUrl": "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdXN0YWluYWJsZSUyMHByb2R1Y3R8ZW58MHx8fHwxNzYxNjcxODI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sustainable product"
+    },
+    {
+      "id": "store-product-2",
+      "description": "Image of a product from RegenStore.",
+      "imageUrl": "https://images.unsplash.com/photo-1564419320408-38e24e038739?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxlY28lMjBmcmllbmRseXxlbnwwfHx8fDE3NjE1NTExMjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eco friendly"
+    },
+    {
+      "id": "store-product-3",
+      "description": "Image of a product from RegenStore.",
+      "imageUrl": "https://images.unsplash.com/photo-1543931457-b1c62eb214f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxoYW5kbWFkZSUyMGNyYWZ0fGVufDB8fHx8MTc2MTY3MTgyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "handmade craft"
+    },
+    {
+      "id": "foundation-hero",
+      "description": "Minimalist illustration for the Foundation page hero.",
+      "imageUrl": "https://images.unsplash.com/photo-1684139517679-032b7213ad2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNoYXBlc3xlbnwwfHx8fDE3NjE1OTQ0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract shapes"
+    },
+    {
+      "id": "hub-diagram",
+      "description": "Diagram of the RegenHub verification flow.",
+      "imageUrl": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmbG93JTIwY2hhcnR8ZW58MHx8fHwxNzYxNjcxODI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "flow chart"
+    },
+    {
+      "id": "fund-diagram",
+      "description": "Diagram of the RegenFund proposal lifecycle.",
+      "imageUrl": "https://images.unsplash.com/photo-1745301754104-4effee07d6ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmZvZ3JhcGhpYyUyMGRpYWdyYW18ZW58MHx8fHwxNzYxNjcxODI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "infographic diagram"
+    }
+  ]
 }
