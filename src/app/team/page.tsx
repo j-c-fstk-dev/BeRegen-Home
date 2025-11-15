@@ -1,3 +1,4 @@
+
 import { FadeIn } from "@/components/animated/fade-in";
 import PageHeader from "@/components/page-header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";

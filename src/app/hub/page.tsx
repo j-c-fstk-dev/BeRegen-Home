@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { FadeIn } from "@/components/animated/fade-in";
 import PageHeader from "@/components/page-header";
@@ -224,8 +225,8 @@ export default function HubPage() {
                 We are inviting a first wave of SMEs, educators, local projects and regenerative communities to co-create RegenHub with us. If you run a small regenerative business, coordinate a school or learning community, steward a local project or agroecology initiative, or are building regenerative infrastructure yourself, we would love to explore a pilot with you.
             </p>
              <div className="mt-8 flex justify-center gap-4">
-                <Button size="lg" asChild><Link href="#">Apply for a Pilot</Link></Button>
-                <Button size="lg" variant="outline" asChild><Link href="#">Talk to the Team</Link></Button>
+                <Button size="lg" asChild><Link href="/contact">Apply for a Pilot</Link></Button>
+                <Button size="lg" variant="outline" asChild><Link href="/contact">Talk to the Team</Link></Button>
              </div>
           </div>
         </section>

@@ -1,9 +1,10 @@
 
+
 import { FadeIn } from "@/components/animated/fade-in";
 import PageHeader from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Bot, BrainCircuit, Coins, Database, Fingerprint, Handshake, IdCard, ListChecks, Network, NotebookPen, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Bot, BrainCircuit, Coins, Database, Fingerprint, Handshake, IdCard, ListChecks, Network, NotebookPen, ShieldCheck, Sparkles, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 const stackLayers = [
@@ -208,5 +209,3 @@ export default function TechPage() {
         </>
     );
 }
-
-    
