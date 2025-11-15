@@ -63,7 +63,7 @@ export default function Header() {
         <div className="flex flex-1 items-center justify-end gap-4">
           <LanguageSwitcher />
           <Button asChild>
-            <Link href="/community">
+            <Link href="/contact">
               Support <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
