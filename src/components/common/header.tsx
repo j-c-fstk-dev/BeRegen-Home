@@ -6,7 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, ChevronDown, ArrowRight } from "lucide-react";
 import { Logo } from "./logo";
 import { mainNavLinks } from "@/lib/nav-links";
@@ -32,6 +32,9 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Main Menu</SheetTitle>
+              </SheetHeader>
               <div className="p-4">
                 <Link href="/" className="flex items-center gap-2 mb-8">
                   <Logo className="w-8 h-8 text-primary" />
