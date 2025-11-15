@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { FadeIn } from "@/components/animated/fade-in";
 import { CuratorFormDialog } from "@/components/community/curator-form-dialog";
 import PageHeader from "@/components/page-header";
@@ -5,6 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Heart } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Community",
+    description: "Our community is the heart of the ecosystem. Your support, participation, and expertise are what bring our regenerative vision to life."
+};
 
 const supportTiers = [
     { title: "Supporter", benefits: "Discord access, monthly updates", price: "$5/mo" },
@@ -22,8 +28,8 @@ export default function CommunityPage() {
       <FadeIn>
         <section className="py-24 sm:py-32">
             <div className="container text-center">
-                <h2 className="font-headline text-3xl font-bold tracking-tight">Support Pathways</h2>
-                <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Choose how you want to contribute to the growth and sustainability of the BeRegen ecosystem.</p>
+                <h2 className="font-headline text-3xl font-medium">Support Pathways</h2>
+                <p className="mt-4 text-neutral-600 max-w-2xl mx-auto">Choose how you want to contribute to the growth and sustainability of the BeRegen ecosystem.</p>
                 <div className="mt-12 grid md:grid-cols-2 gap-8">
                     <Card className="text-left">
                         <CardHeader>
@@ -37,14 +43,14 @@ export default function CommunityPage() {
                                     <li key={tier.title} className="flex justify-between items-center p-3 border rounded-lg">
                                         <div>
                                             <h4 className="font-semibold">{tier.title}</h4>
-                                            <p className="text-sm text-muted-foreground">{tier.benefits}</p>
+                                            <p className="text-sm text-neutral-600">{tier.benefits}</p>
                                         </div>
                                         <div className="font-bold text-lg">{tier.price}</div>
                                     </li>
                                 ))}
                             </ul>
                             <Button className="w-full" asChild>
-                                <Link href="#" target="_blank">Support on Patreon <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                                <Link href="#" target="_blank">Support on Patreon</Link>
                             </Button>
                         </CardContent>
                     </Card>
@@ -55,12 +61,12 @@ export default function CommunityPage() {
                             <CardDescription>Make a one-time or recurring donation directly to our projects on-chain. All donations are transparent and may be eligible for GIVbacks.</CardDescription>
                         </CardHeader>
                         <CardContent className="flex flex-col h-full">
-                           <div className="flex-grow space-y-2 text-sm text-muted-foreground">
+                           <div className="flex-grow space-y-2 text-sm text-neutral-600">
                              <p>Accepted tokens: ETH, DAI, GIV</p>
                              <p>All transactions are public on the blockchain.</p>
                            </div>
                            <Button className="w-full mt-6" asChild>
-                                <Link href="#" target="_blank">Donate on Giveth <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                                <Link href="#" target="_blank">Donate on Giveth</Link>
                             </Button>
                         </CardContent>
                     </Card>
@@ -71,8 +77,8 @@ export default function CommunityPage() {
       <FadeIn>
         <section id="get-involved" className="py-24 sm:py-32 bg-card border-y">
             <div className="container text-center">
-                <h2 className="font-headline text-3xl font-bold tracking-tight">Get Involved</h2>
-                <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Your skills and expertise are valuable. Apply to become a curator or validator and play a direct role in our governance and verification processes.</p>
+                <h2 className="font-headline text-3xl font-medium">Get Involved</h2>
+                <p className="mt-4 text-neutral-600 max-w-2xl mx-auto">Your skills and expertise are valuable. Apply to become a curator or validator and play a direct role in our governance and verification processes.</p>
                 <div className="mt-8">
                     <CuratorFormDialog />
                 </div>

@@ -1,13 +1,16 @@
-
-import Image from "next/image";
+import { Metadata } from "next";
 import { FadeIn } from "@/components/animated/fade-in";
 import PageHeader from "@/components/page-header";
 import { Button } from "@/components/ui/button";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { ArrowRight, UserRound, School, Building, ListChecks, Wand2, Bot, ShieldCheck, User, Users, BrainCircuit, FileText, Globe2, IdCard, Share2 } from "lucide-react";
+import { ArrowRight, UserRound, School, Building, ListChecks, Wand2, Bot, ShieldCheck, User, Users } from "lucide-react";
 import Link from "next/link";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+
+export const metadata: Metadata = {
+    title: "RegenHub — Ecological Diagnostics, Impact Validation & Regenerative Identity",
+    description: "RegenHub is a modular infrastructure layer for ecological diagnostics (LEAP), impact submissions, AI-assisted validation and public regenerative identity. Pilot programs open.",
+};
 
 const whoIsItFor = [
     { 
@@ -79,24 +82,24 @@ export default function HubPage() {
                 <Badge variant="secondary">Early pilots LATAM</Badge>
                 <Badge variant="secondary">Open infrastructure</Badge>
             </div>
-            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter">
               RegenHub — Regenerative Impact & Identity Layer
             </h1>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
               A modular hub for ecological diagnostics, impact tracking, regenerative identity and AI-assisted validation — built for small businesses, educators, local projects and regenerative citizens.
             </p>
           </FadeIn>
           <FadeIn delay={0.2} className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link href="#">
+              <Link href="/contact">
                 Join as Early Tester
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="/ecosystem">
-                Explore the Ecosystem <ArrowRight className="ml-2 h-4 w-4" />
+                Explore the Ecosystem
               </Link>
             </Button>
           </FadeIn>
@@ -106,16 +109,18 @@ export default function HubPage() {
       <FadeIn>
         <section className="py-24 sm:py-32">
             <div className="container text-center max-w-3xl mx-auto">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">What is RegenHub?</h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                    RegenHub is the core infrastructure layer of the BeRegen ecosystem.
-                </p>
-                 <p className="mt-4 text-lg text-muted-foreground">
-                    It is a space where SMEs, educators, local projects and citizens can run ecological diagnostics, register their regenerative actions, build a verified regenerative identity, receive AI-assisted validation, and share public impact profiles.
-                </p>
-                 <p className="mt-4 text-lg text-muted-foreground font-semibold">
-                    RegenHub turns scattered efforts into visible, verifiable and fundable regenerative impact.
-                </p>
+                <h2 className="font-headline text-3xl font-medium">What is RegenHub?</h2>
+                <div className="mt-4 text-lg text-neutral-600 space-y-4">
+                    <p>
+                        RegenHub is the core infrastructure layer of the BeRegen ecosystem.
+                    </p>
+                    <p>
+                        It is a space where SMEs, educators, local projects and citizens can run ecological diagnostics, register their regenerative actions, build a verified regenerative identity, receive AI-assisted validation, and share public impact profiles.
+                    </p>
+                    <p className="text-neutral-900">
+                        RegenHub turns scattered efforts into visible, verifiable and fundable regenerative impact.
+                    </p>
+                </div>
             </div>
         </section>
       </FadeIn>
@@ -123,13 +128,13 @@ export default function HubPage() {
       <FadeIn>
         <section className="py-24 sm:py-32 bg-card border-y">
             <div className="container">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-center mb-12">Who is RegenHub for?</h2>
+                <h2 className="font-headline text-3xl font-medium text-center mb-12">Who is RegenHub for?</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {whoIsItFor.map((user) => (
                         <div key={user.title} className="flex flex-col text-center items-center">
                             <div className="bg-primary/10 p-4 rounded-full mb-4 text-primary">{user.icon}</div>
-                            <h3 className="font-headline text-lg font-semibold">{user.title}</h3>
-                            <p className="mt-2 text-muted-foreground text-sm">{user.description}</p>
+                            <h3 className="font-headline text-xl font-medium">{user.title}</h3>
+                            <p className="mt-2 text-neutral-600 text-sm">{user.description}</p>
                         </div>
                     ))}
                 </div>
@@ -141,19 +146,19 @@ export default function HubPage() {
         <section className="py-24 sm:py-32">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
+              <h2 className="font-headline text-3xl font-medium">
                 Core Modules
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {coreModules.map((item) => (
-                <Card key={item.title} className="flex flex-col text-left">
+                <Card key={item.title} className="flex flex-col text-left transition-transform duration-300 hover:scale-105">
                   <CardHeader>
                     {item.icon}
                     <CardTitle className="mt-4 text-xl">{item.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <p className="text-neutral-600">{item.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -165,20 +170,20 @@ export default function HubPage() {
       <FadeIn>
         <section className="py-24 sm:py-32 bg-primary/10">
             <div className="container max-w-4xl mx-auto">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-center mb-12">How RegenHub Works</h2>
+                <h2 className="font-headline text-3xl font-medium text-center mb-12">How RegenHub Works</h2>
                 <div className="relative">
                     <div className="absolute left-1/2 -translate-x-1/2 top-4 bottom-4 w-0.5 bg-primary/20 hidden md:block"></div>
                     {howItWorksSteps.map((item, index) => (
                         <div key={item.step} className={`relative flex items-start gap-8 md:gap-16 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                             <div className="hidden md:flex bg-background border-2 border-primary/20 text-primary w-16 h-16 rounded-full items-center justify-center shrink-0">
-                                <span className="font-headline text-2xl font-bold">{item.step}</span>
+                                <span className="font-headline text-2xl font-semibold">{item.step}</span>
                             </div>
                             <div className="pb-16 flex-1">
                                 <div className="md:hidden bg-primary/10 text-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 shrink-0">
-                                    <span className="font-headline text-xl font-bold">{item.step}</span>
+                                    <span className="font-headline text-xl font-semibold">{item.step}</span>
                                 </div>
-                                <h3 className="font-headline text-xl font-bold">{item.title}</h3>
-                                <p className="mt-2 text-muted-foreground">{item.description}</p>
+                                <h3 className="font-headline text-xl font-medium">{item.title}</h3>
+                                <p className="mt-2 text-neutral-600">{item.description}</p>
                             </div>
                         </div>
                     ))}
@@ -191,25 +196,25 @@ export default function HubPage() {
         <section className="py-24 sm:py-32">
             <div className="container grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 className="font-headline text-3xl font-bold tracking-tight">Current Status & Pilot Roadmap</h2>
-                    <p className="mt-4 text-muted-foreground">
+                    <h2 className="font-headline text-3xl font-medium">Current Status & Pilot Roadmap</h2>
+                    <p className="mt-4 text-neutral-600">
                         RegenHub is currently in MVP development, with early pilots starting in Latin America.
                     </p>
-                    <p className="mt-4 text-muted-foreground">
+                    <p className="mt-4 text-neutral-600">
                         Our next milestones:
                     </p>
-                     <ul className="mt-4 space-y-2 text-muted-foreground list-disc list-inside">
+                     <ul className="mt-4 space-y-2 text-neutral-600 list-disc list-inside">
                         <li><strong>Q4 2025:</strong> MVP live with LEAP v1, Impact Wizard and AI pre-validation v0, 10–20 pilot users.</li>
                         <li><strong>Q1 2026:</strong> Identity & reputation layer (early verifiable credentials and attestations), public impact profiles and 50+ SMEs and projects onboarded.</li>
                         <li><strong>Q2 2026:</strong> Regional pilots with communities, educators and local networks across Brazil and LATAM.</li>
                     </ul>
                 </div>
                  <div className="bg-card p-8 rounded-2xl border">
-                    <h3 className="font-headline text-xl font-semibold mb-4">Built on Open Standards & Public Goods</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="font-headline text-xl font-medium mb-4">Built on Open Standards & Public Goods</h3>
+                    <p className="text-neutral-600">
                         RegenHub is being designed to integrate with open standards and public-good infrastructure in the Web3 and regenerative finance ecosystems.
                     </p>
-                    <p className="mt-4 text-muted-foreground">
+                    <p className="mt-4 text-neutral-600">
                         We are exploring: ecological diagnostic logic inspired by LEAP and TNFD, verifiable credentials and attestations for regenerative identity, interoperability with tools like Gitcoin Passport and similar reputation systems, and pathways to integrate with regenerative funds and public-good ecosystems.
                     </p>
                 </div>
@@ -220,8 +225,8 @@ export default function HubPage() {
       <FadeIn>
         <section className="py-24 sm:py-32 bg-card border-y">
           <div className="container text-center max-w-3xl mx-auto">
-             <h2 className="font-headline text-3xl font-bold tracking-tight">Join the First Wave of RegenHub Pilots</h2>
-             <p className="mt-4 text-muted-foreground">
+             <h2 className="font-headline text-3xl font-medium">Join the First Wave of RegenHub Pilots</h2>
+             <p className="mt-4 text-neutral-600">
                 We are inviting a first wave of SMEs, educators, local projects and regenerative communities to co-create RegenHub with us. If you run a small regenerative business, coordinate a school or learning community, steward a local project or agroecology initiative, or are building regenerative infrastructure yourself, we would love to explore a pilot with you.
             </p>
              <div className="mt-8 flex justify-center gap-4">

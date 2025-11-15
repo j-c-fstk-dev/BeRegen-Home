@@ -1,9 +1,15 @@
+import { Metadata } from "next";
 import { FadeIn } from "@/components/animated/fade-in";
 import PageHeader from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Calendar, CheckCircle, Rocket, Target } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "BeRegen Roadmap 2025–2027 — Grants, Milestones & Ecosystem Growth",
+    description: "Explore BeRegen’s timeline, grant participation and development milestones across RegenHub, RegenFlix, RegenApp and RegenFund.",
+};
 
 const timeline = [
     {
@@ -112,13 +118,15 @@ export default function RoadmapPage() {
       <FadeIn>
         <section className="py-24 sm:py-32">
             <div className="container text-center max-w-3xl mx-auto">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">2025–2027 Roadmap</h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                    BeRegen is unfolding in intentional phases, ensuring that each layer of the ecosystem is stable, meaningful and capable of supporting real regenerative communities.
-                </p>
-                <p className="mt-4 text-lg text-muted-foreground">
-                   Below is our high-level roadmap for the next three years, guiding the development of RegenHub, RegenFlix, RegenApp and RegenFund.
-                </p>
+                <h2 className="font-headline text-3xl font-medium">2025–2027 Roadmap</h2>
+                <div className="mt-4 text-lg text-neutral-600 space-y-4">
+                    <p>
+                        BeRegen is unfolding in intentional phases, ensuring that each layer of the ecosystem is stable, meaningful and capable of supporting real regenerative communities.
+                    </p>
+                    <p>
+                    Below is our high-level roadmap for the next three years, guiding the development of RegenHub, RegenFlix, RegenApp and RegenFund.
+                    </p>
+                </div>
             </div>
         </section>
       </FadeIn>
@@ -126,26 +134,26 @@ export default function RoadmapPage() {
       <FadeIn>
         <section className="py-24 sm:py-32 bg-card border-y">
             <div className="container max-w-4xl mx-auto">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-center mb-12">Detailed Roadmap</h2>
+                <h2 className="font-headline text-3xl font-medium text-center mb-12">Detailed Roadmap</h2>
                 <div className="relative">
                     <div className="absolute left-1/2 -translate-x-1/2 top-4 bottom-4 w-0.5 bg-border hidden md:block" aria-hidden="true"></div>
                     {timeline.map((item, index) => (
                         <div key={item.quarter} className={`relative flex items-start gap-8 md:gap-16 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                             <div className="hidden md:flex bg-background border-2 border-primary/20 text-primary w-24 h-24 rounded-full items-center justify-center shrink-0 flex-col">
                                 <Calendar className="h-6 w-6 mb-1"/>
-                                <span className="font-headline text-lg font-bold">{item.quarter}</span>
+                                <span className="font-headline text-lg font-semibold">{item.quarter}</span>
                             </div>
                             <div className="pb-16 flex-1">
                                 <div className="md:hidden bg-primary/10 text-primary p-4 rounded-xl flex items-center gap-4 mb-4 shrink-0">
                                     <Calendar className="h-6 w-6"/>
-                                    <span className="font-headline text-xl font-bold">{item.quarter}</span>
+                                    <span className="font-headline text-xl font-semibold">{item.quarter}</span>
                                 </div>
-                                <h3 className="font-headline text-xl font-bold">{item.title}</h3>
+                                <h3 className="font-headline text-xl font-medium">{item.title}</h3>
                                 <ul className="mt-4 space-y-2">
                                     {item.points.map((point, i) => (
                                         <li key={i} className="flex items-start gap-3">
                                             <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                                            <span className="text-muted-foreground">{point}</span>
+                                            <span className="text-neutral-600">{point}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -161,8 +169,8 @@ export default function RoadmapPage() {
         <section className="py-24 sm:py-32">
             <div className="container">
                  <div className="text-center mb-12">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">Grants, Programs & Collaborations</h2>
-                    <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                    <h2 className="font-headline text-3xl font-medium">Grants, Programs & Collaborations</h2>
+                    <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
                         BeRegen is actively participating in regenerative finance, public goods and ecological innovation programs across multiple networks. Below is an updated list of programs, grants and challenges we have applied to or are currently engaged with:
                     </p>
                 </div>
@@ -179,7 +187,7 @@ export default function RoadmapPage() {
                                 {activeGrants.map(grant => (
                                     <li key={grant} className="flex items-start gap-3">
                                         <CheckCircle className="h-5 w-5 text-primary/80 mt-0.5 shrink-0"/>
-                                        <span className="text-muted-foreground">{grant}</span>
+                                        <span className="text-neutral-600">{grant}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -200,7 +208,7 @@ export default function RoadmapPage() {
                                         <div className="h-5 w-5 flex justify-center items-center mt-0.5 shrink-0">
                                             <div className="h-2 w-2 rounded-full bg-border" />
                                         </div>
-                                        <span className="text-muted-foreground">{grant}</span>
+                                        <span className="text-neutral-600">{grant}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -214,12 +222,12 @@ export default function RoadmapPage() {
       <FadeIn>
         <section className="py-24 sm:py-32 bg-card border-y">
             <div className="container">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-center mb-12">Why BeRegen is a Strong Candidate</h2>
+                <h2 className="font-headline text-3xl font-medium text-center mb-12">Why BeRegen is a Strong Candidate</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {whyReasons.map((reason) => (
-                        <div key={reason.title} className="p-6 border rounded-lg">
-                           <h3 className="font-headline text-xl font-bold mb-2">{reason.title}</h3>
-                           <p className="text-muted-foreground">{reason.description}</p>
+                        <div key={reason.title} className="p-6 border rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                           <h3 className="font-headline text-xl font-medium mb-2">{reason.title}</h3>
+                           <p className="text-neutral-600">{reason.description}</p>
                         </div>
                     ))}
                 </div>
@@ -230,13 +238,13 @@ export default function RoadmapPage() {
       <FadeIn>
         <section className="py-24 sm:py-32">
           <div className="container text-center max-w-3xl mx-auto">
-             <h2 className="font-headline text-3xl font-bold tracking-tight">Partner with BeRegen</h2>
-             <p className="mt-4 text-muted-foreground">
+             <h2 className="font-headline text-3xl font-medium">Partner with BeRegen</h2>
+             <p className="mt-4 text-neutral-600">
                 We are building a long-term regenerative infrastructure and are looking for partners, funders and pilot communities aligned with this mission. If you are a grant operator, public-good ecosystem, regenerative investor or a community that wants to pilot the RegenHub, let’s talk.
             </p>
              <div className="mt-8 flex justify-center gap-4">
                 <Button size="lg" asChild><Link href="/contact">Contact the Team</Link></Button>
-                <Button size="lg" variant="outline" asChild><Link href="/hub">Start a Pilot</Link></Button>
+                <Button size="lg" variant="outline" asChild><Link href="/contact">Start a Pilot</Link></Button>
              </div>
           </div>
         </section>

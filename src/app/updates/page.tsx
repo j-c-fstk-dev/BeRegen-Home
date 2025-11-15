@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { FadeIn } from "@/components/animated/fade-in";
 import PageHeader from "@/components/page-header";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,6 +7,11 @@ import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+    title: "Updates",
+    description: "The latest news, articles, and developments from across the BeRegen ecosystem."
+};
 
 const posts = [
   { id: 1, title: "Portal Launch: The BeRegen Ecosystem is Live!", date: "June 20, 2024", imageId: 'update-post-1', slug: '/updates/portal-launch' },
@@ -30,27 +36,25 @@ export default function UpdatesPage() {
               {posts.map((post) => {
                 const image = PlaceHolderImages.find(p => p.id === post.imageId);
                 return (
-                  <Card key={post.id} className="flex flex-col overflow-hidden">
-                    {image && (
-                      <div className="relative aspect-video">
-                        <Image
-                          src={image.imageUrl}
-                          alt={image.description}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={image.imageHint}
-                        />
-                      </div>
-                    )}
+                  image && <Card key={post.id} className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div className="relative aspect-video">
+                      <Image
+                        src={image.imageUrl}
+                        alt={image.description}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={image.imageHint}
+                      />
+                    </div>
                     <CardHeader>
                       <CardTitle className="text-lg leading-tight">{post.title}</CardTitle>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2">
+                      <div className="flex items-center gap-2 text-sm text-neutral-600 pt-2">
                         <Calendar className="h-4 w-4" />
                         <span>{post.date}</span>
                       </div>
                     </CardHeader>
                     <CardContent className="flex-grow">
-                      <p className="text-muted-foreground text-sm line-clamp-2">A brief summary of the post would go here, enticing the user to read more...</p>
+                      <p className="text-neutral-600 text-sm line-clamp-2">A brief summary of the post would go here, enticing the user to read more...</p>
                     </CardContent>
                     <CardFooter>
                       <Button variant="secondary" className="w-full" asChild>

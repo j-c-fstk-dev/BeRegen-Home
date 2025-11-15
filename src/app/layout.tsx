@@ -5,8 +5,33 @@ import Footer from "@/components/common/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "BeRegen Portal",
-  description: "BeRegen Foundation — regenere sua vida, regenere o planeta.",
+  metadataBase: new URL('https://beregen.life'),
+  title: {
+    default: "BeRegen — Living Infrastructure for a Regenerative World",
+    template: "%s | BeRegen",
+  },
+  description: "BeRegen is a regenerative innovation ecosystem creating open infrastructure for ecological diagnostics, impact validation, regenerative identity and community-aligned finance.",
+  openGraph: {
+    title: "BeRegen — Living Infrastructure for a Regenerative World",
+    description: "Open ecosystem for ecological diagnostics, impact validation and regenerative identity.",
+    url: "https://beregen.life",
+    siteName: "BeRegen",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BeRegen — Living Infrastructure for a Regenerative World",
+    description: "Open ecosystem for ecological diagnostics, impact validation and regenerative identity.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +45,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

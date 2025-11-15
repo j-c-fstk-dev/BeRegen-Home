@@ -1,4 +1,3 @@
-
 export type NavLink = {
   name: string;
   href: string;
@@ -58,5 +57,3 @@ export const socialLinks: NavLink[] = [
     { name: 'Github', href: '#', external: true },
     { name: 'LinkedIn', href: '#', external: true },
 ];
-
-    

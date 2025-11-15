@@ -11,12 +11,12 @@ export default function PageHeader({ title, description, image }: PageHeaderProp
     <section className="border-b bg-card">
       <div className="container text-center py-20 lg:py-32">
         <FadeIn>
-          <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+          <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter">
             {title}
           </h1>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-neutral-600 max-w-2xl mx-auto">
             {description}
           </p>
         </FadeIn>

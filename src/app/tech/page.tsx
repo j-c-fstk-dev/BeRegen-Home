@@ -1,15 +1,19 @@
-
-
+import { Metadata } from "next";
 import { FadeIn } from "@/components/animated/fade-in";
 import PageHeader from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Bot, BrainCircuit, Coins, Database, Fingerprint, Handshake, IdCard, ListChecks, Network, NotebookPen, ShieldCheck, Sparkles, CheckCircle } from "lucide-react";
+import { ArrowRight, Bot, Database, Fingerprint, Network, CheckCircle } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "BeRegen Technical Overview — Identity, AI, Impact Data & Interoperability",
+    description: "Discover the BeRegen Stack: regenerative identity, AI-assisted validation, ecological diagnostics, impact data architecture and future funding interoperability.",
+};
 
 const stackLayers = [
     {
-        icon: <IdCard />,
+        icon: <Fingerprint />,
         title: "Identity & Reputation",
         description: "A regenerative identity layer that aggregates trust across actions, diagnostics and community validation.",
         components: [
@@ -33,7 +37,7 @@ const stackLayers = [
         ]
     },
     {
-        icon: <ListChecks />,
+        icon: <Database />,
         title: "Impact & Data Layer",
         description: "A structured data layer where ecological diagnostics, impact submissions and evidence are collected, organized and prepared for reputation, reporting and funding.",
         components: [
@@ -61,25 +65,25 @@ const stackLayers = [
 const sections = [
     {
         title: "AI & Ecological Intelligence",
-        text: "Our AI systems are not built for extraction — they are built for regeneration.",
+        text: "Our AI systems are not built for extraction — they are built for regeneration. We use AI to:",
         points: [
-            "Improve clarity and consistency of submissions,",
-            "Support ecological diagnostics,",
-            "Detect missing information,",
-            "Help small projects tell their story,",
-            "Make regenerative data legible and fundable.",
+            "improve clarity and consistency of submissions,",
+            "support ecological diagnostics,",
+            "detect missing information,",
+            "help small projects tell their story,",
+            "make regenerative data legible and fundable.",
         ],
         conclusion: "Our approach ensures that human knowledge and local ecological wisdom always remain at the center."
     },
     {
         title: "Regenerative Identity & Reputation",
-        text: "The identity system is designed to grow from simple user profiles into a regenerative trust layer based on verifiable credentials, attestations and public impact.",
+        text: "The identity system is designed to grow from simple user profiles into a regenerative trust layer based on verifiable credentials, attestations and public impact. This allows:",
         points: [
-            "Long-term regenerative identity,",
-            "Multi-source reputation,",
-            "Portable impact,",
-            "Community validation,",
-            "And future funding alignment.",
+            "long-term regenerative identity,",
+            "multi-source reputation,",
+            "portable impact,",
+            "community validation,",
+            "and future funding alignment.",
         ],
         conclusion: ""
     },
@@ -95,7 +99,7 @@ const sections = [
     },
     {
         title: "Interoperability & Future Finance",
-        text: "BeRegen is designed to integrate with public-good infrastructure in the ReFi and Web3 ecosystems.",
+        text: "BeRegen is designed to integrate with public-good infrastructure in the ReFi and Web3 ecosystems. We are exploring:",
         points: [
             "Verifiable Credentials & Attestations",
             "Gitcoin Passport alignment",
@@ -120,14 +124,14 @@ export default function TechPage() {
                 <section id="stack" className="py-24 sm:py-32">
                     <div className="container">
                         <div className="text-center mb-12">
-                            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">The BeRegen Stack</h2>
-                            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+                            <h2 className="font-headline text-3xl font-medium">The BeRegen Stack</h2>
+                            <p className="mt-4 text-neutral-600 max-w-2xl mx-auto">
                                 BeRegen is built as a modular stack composed of four interconnected layers. Each layer stands on its own, but the ecosystem becomes powerful when they interact.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {stackLayers.map((layer) => (
-                                <Card key={layer.title} className="flex flex-col">
+                                <Card key={layer.title} className="flex flex-col transition-transform duration-300 hover:scale-105">
                                     <CardHeader>
                                         <div className="flex items-center gap-4">
                                             <div className="bg-primary/10 text-primary p-3 rounded-lg">
@@ -137,12 +141,12 @@ export default function TechPage() {
                                         </div>
                                     </CardHeader>
                                     <CardContent className="flex-grow space-y-4">
-                                        <p className="text-muted-foreground">{layer.description}</p>
+                                        <p className="text-neutral-600">{layer.description}</p>
                                         <div>
                                             <h4 className="font-semibold text-sm mb-2">Core components:</h4>
                                             <ul className="space-y-1.5">
                                                 {layer.components.map((component, i) => (
-                                                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                                    <li key={i} className="flex items-center gap-2 text-sm text-neutral-600">
                                                         <ArrowRight className="h-4 w-4 text-primary/50" />
                                                         <span>{component}</span>
                                                     </li>
@@ -162,16 +166,16 @@ export default function TechPage() {
                     <section className={`py-24 sm:py-32 ${index % 2 === 0 ? 'bg-card border-y' : ''}`}>
                         <div className="container grid md:grid-cols-2 gap-16 items-center">
                             <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                                <h2 className="font-headline text-3xl font-bold tracking-tight">{section.title}</h2>
-                                <p className="mt-4 text-muted-foreground">{section.text}</p>
-                                {section.conclusion && <p className="mt-4 text-muted-foreground">{section.conclusion}</p>}
+                                <h2 className="font-headline text-3xl font-medium">{section.title}</h2>
+                                <p className="mt-4 text-neutral-600">{section.text}</p>
+                                {section.conclusion && <p className="mt-4 text-neutral-600">{section.conclusion}</p>}
                             </div>
                             <div className={`p-8 rounded-2xl ${index % 2 === 0 ? 'bg-background/50' : 'bg-card border'}`}>
                                 <ul className="space-y-3">
                                     {section.points.map((point, i) => (
                                         <li key={i} className="flex items-start gap-3">
                                             <CheckCircle className="h-5 w-5 text-primary mt-1 shrink-0" />
-                                            <span className="font-medium">{point}</span>
+                                            <span className="font-medium text-neutral-900">{point}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -184,8 +188,8 @@ export default function TechPage() {
             <FadeIn>
                 <section className="py-24 sm:py-32">
                     <div className="container text-center">
-                        <h2 className="font-headline text-3xl font-bold tracking-tight">Documentation & Repositories</h2>
-                        <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">BeRegen is being built in an open and transparent way. Documentation, diagrams, database schemas and technical updates will be published here as they evolve.</p>
+                        <h2 className="font-headline text-3xl font-medium">Documentation & Repositories</h2>
+                        <p className="mt-4 text-neutral-600 max-w-2xl mx-auto">BeRegen is being built in an open and transparent way. Documentation, diagrams, database schemas and technical updates will be published here as they evolve.</p>
                         <div className="mt-8 flex justify-center gap-4">
                             <Button size="lg" variant="secondary" disabled>View GitHub (Coming Soon)</Button>
                             <Button size="lg" variant="secondary" disabled>Read Documentation (Coming Soon)</Button>
@@ -197,8 +201,8 @@ export default function TechPage() {
             <FadeIn>
                 <section className="py-24 sm:py-32 bg-primary/10">
                     <div className="container text-center max-w-3xl mx-auto">
-                        <h2 className="font-headline text-3xl font-bold tracking-tight">Want to collaborate on identity, VCs, AI, impact data or regenerative finance?</h2>
-                        <p className="mt-4 text-muted-foreground">We would love to connect.</p>
+                        <h2 className="font-headline text-3xl font-medium">Want to collaborate on identity, VCs, AI, impact data or regenerative finance?</h2>
+                        <p className="mt-4 text-neutral-600">We would love to connect.</p>
                         <div className="mt-8 flex justify-center gap-4">
                             <Button size="lg" asChild><Link href="/contact">Contact the Team</Link></Button>
                             <Button size="lg" variant="outline" asChild><Link href="/hub">Explore RegenHub</Link></Button>
