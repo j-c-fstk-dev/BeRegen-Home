@@ -7,7 +7,7 @@ export type NavLink = {
 
 export const mainNavLinks: NavLink[] = [
   { name: 'Home', href: '/' },
-  { name: 'Ecosystem', href: '/#ecosystem' },
+  { name: 'Ecosystem', href: '/ecosystem' },
   { name: 'RegenHub', href: '/hub' },
   { name: 'Roadmap', href: '/roadmap' },
   { name: 'Team', href: '/team' },
