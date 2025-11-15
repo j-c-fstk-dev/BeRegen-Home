@@ -16,14 +16,14 @@ export default function Footer() {
   return (
     <footer className="bg-card border-t mt-24">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          <div className="lg:col-span-2 pr-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="lg:col-span-1 pr-8">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Logo className="w-8 h-8 text-primary" />
               <span className="font-headline text-xl font-bold">BeRegen</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-sm">
-              An open ecosystem of tools, culture, and governance for a regenerative future.
+             BeRegen — Regenerative Infrastructure for Communities.
             </p>
           </div>
           {footerLinks.map((section) => (
@@ -50,7 +50,7 @@ export default function Footer() {
         <Separator className="my-8" />
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} BeRegen Foundation. All rights reserved.
+            © 2025 BeRegen Foundation. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
             {socialLinks.map((link) => (

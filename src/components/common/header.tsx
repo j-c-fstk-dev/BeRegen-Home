@@ -9,7 +9,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, ChevronDown, ArrowRight } from "lucide-react";
 import { Logo } from "./logo";
-import { mainNavLinks, ecosystemLinks } from "@/lib/nav-links";
+import { mainNavLinks } from "@/lib/nav-links";
 import LanguageSwitcher from "./language-switcher";
 
 export default function Header() {
@@ -38,7 +38,7 @@ export default function Header() {
                   <span className="font-headline text-xl font-bold">BeRegen</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
-                  {[...mainNavLinks, ...ecosystemLinks].map((link) => (
+                  {mainNavLinks.map((link) => (
                     <Button variant="link" asChild key={link.href}>
                       <Link href={link.href}>{link.name}</Link>
                     </Button>
@@ -50,26 +50,6 @@ export default function Header() {
         </div>
 
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost">
-                Ecosystem <ChevronDown className="ml-1 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              {ecosystemLinks.map((link) => (
-                <DropdownMenuItem key={link.href} asChild>
-                  <Link href={link.href} className="w-full">
-                    <div className="flex flex-col">
-                      <span className="font-medium">{link.name}</span>
-                      <span className="text-xs text-muted-foreground">{link.description}</span>
-                    </div>
-                  </Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
           {mainNavLinks.map((link) => (
             <Button variant="ghost" asChild key={link.href}>
               <Link href={link.href}>{link.name}</Link>

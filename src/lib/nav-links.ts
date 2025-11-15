@@ -6,50 +6,47 @@ export type NavLink = {
 };
 
 export const mainNavLinks: NavLink[] = [
-  { name: 'Foundation', href: '/foundation' },
-  { name: 'Community', href: '/community' },
-  { name: 'Transparency', href: '/transparency' },
-  { name: 'Updates', href: '/updates' },
+  { name: 'Home', href: '/' },
+  { name: 'Ecosystem', href: '/#ecosystem' },
+  { name: 'RegenHub', href: '/hub' },
+  { name: 'Roadmap', href: '/roadmap' },
+  { name: 'Team', href: '/team' },
+  { name: 'Tech', href: '/tech' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 export const ecosystemLinks: NavLink[] = [
-  { name: 'BeRegen App', href: '/app', description: 'RegenTaskFlow – Productivity & regenerative habits' },
-  { name: 'RegenHub', href: '/hub', description: 'Impact verification and certification' },
-  { name: 'RegenFund', href: '/fund', description: 'Decentralized force financing real impact' },
-  { name: 'RegenFlix', href: '/flix', description: 'Education for a regenerative life' },
-  { name: 'RegenStore', href: '/store', description: 'Every purchase funds impact' },
+  { name: 'RegenHub', href: '/hub', description: 'Impact, Identity & Ecological Intelligence' },
+  { name: 'RegenFlix', href: '/flix', description: 'Learning & Regenerative Media' },
+  { name: 'RegenApp', href: '/app', description: 'Habits for Regeneration' },
+  { name: 'RegenFund', href: '/fund', description: 'Community-Aligned Finance' },
 ];
 
 export const footerLinks: { title: string, links: NavLink[] }[] = [
   {
     title: 'Ecosystem',
     links: [
-      ...ecosystemLinks,
+        { name: 'RegenHub', href: '/hub' },
+        { name: 'RegenFlix', href: '/flix' },
+        { name: 'RegenApp', href: '/app' },
+        { name: 'RegenFund', href: '/fund' },
     ]
   },
   {
     title: 'Foundation',
     links: [
-      { name: 'About Us', href: '/foundation' },
+      { name: 'About', href: '/foundation' },
+      { name: 'Roadmap', href: '/roadmap' },
       { name: 'Transparency', href: '/transparency' },
-      { name: 'Updates', href: '/updates' },
+      { name: 'Team', href: '/team' },
     ]
   },
   {
-    title: 'Community',
+    title: 'Contact',
     links: [
-      { name: 'Support Us', href: '/community' },
-      { name: 'Get Involved', href: '/community#get-involved' },
-      { name: 'Patreon', href: '#', external: true },
-      { name: 'Giveth', href: '#', external: true },
-    ]
-  },
-  {
-    title: 'Resources',
-    links: [
-      { name: 'Docs', href: '/docs' },
-      { name: 'Brand Kit', href: '#' },
-      { name: 'Contact Us', href: '#' },
+      { name: 'hello@beregen.org', href: 'mailto:hello@beregen.org' },
+      { name: 'Twitter: @beregen', href: 'https://twitter.com/beregen', external: true },
+      { name: 'Contact Form', href: '/contact' },
     ]
   }
 ];
