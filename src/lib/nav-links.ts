@@ -53,7 +53,10 @@ export const footerLinks: { title: string, links: NavLink[] }[] = [
 
 export const socialLinks: NavLink[] = [
     { name: 'Twitter', href: 'https://x.com/beregenlife', external: true },
+    { name: 'Instagram', href: 'https://www.instagram.com/beregen.store', external: true },
     { name: 'Discord', href: 'https://t.me/Beregenerative', external: true },
     { name: 'Github', href: 'https://github.com/j-c-fstk-dev/BeRegen-Home', external: true },
-    { name: 'LinkedIn', href: '#', external: true },
+    { name: 'Patreon', href: 'https://www.patreon.com/BeRegen', external: true },
+    { name: 'Giveth', href: 'https://giveth.io/project/beregen', external: true },
+    { name: 'Etsy', href: 'https://www.etsy.com/pt/shop/BeRegenStore', external: true },
 ];
