@@ -44,16 +44,16 @@ export const footerLinks: { title: string, links: NavLink[] }[] = [
   {
     title: 'Contact',
     links: [
-      { name: 'hello@beregen.org', href: 'mailto:hello@beregen.org' },
-      { name: 'Twitter: @beregen', href: 'https://twitter.com/beregen', external: true },
+      { name: 'hello@beregen.org', href: 'mailto:beregenerative.life@gmail.com' },
+      { name: 'Twitter: @beregen', href: 'https://x.com/beregenlife', external: true },
       { name: 'Contact Form', href: '/contact' },
     ]
   }
 ];
 
 export const socialLinks: NavLink[] = [
-    { name: 'Twitter', href: '#', external: true },
-    { name: 'Discord', href: '#', external: true },
-    { name: 'Github', href: '#', external: true },
+    { name: 'Twitter', href: 'https://x.com/beregenlife', external: true },
+    { name: 'Discord', href: 'https://t.me/Beregenerative', external: true },
+    { name: 'Github', href: 'https://github.com/j-c-fstk-dev/BeRegen-Home', external: true },
     { name: 'LinkedIn', href: '#', external: true },
 ];
