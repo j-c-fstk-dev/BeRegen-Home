@@ -35,7 +35,6 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <section className="w-full pt-20 pb-16 md:pt-32 md:pb-24 text-center relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-100/30 via-green-100/30 to-beige-100/30 -z-10"></div>
         <div className="container">
           <FadeIn>
             <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter max-w-4xl mx-auto">
@@ -63,7 +62,7 @@ export default function Home() {
       </section>
 
       <FadeIn className="w-full" delay={0.3}>
-        <section className="py-24 sm:py-32 bg-card border-y">
+        <section className="py-24 sm:py-32 bg-card/80 backdrop-blur-sm border-y">
             <div className="container text-center max-w-3xl mx-auto">
                 <p className="font-headline text-2xl md:text-3xl text-neutral-700">
                   Regeneration already exists everywhere — but it’s scattered, underfunded and disconnected. BeRegen was created to weave these pieces together into a living ecosystem: people, land, communities and technology aligned in service of planetary healing.
@@ -80,7 +79,7 @@ export default function Home() {
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {ecosystemPillars.map((pillar) => (
-                <Card key={pillar.title} className="flex flex-col text-center transition-transform duration-300 hover:scale-105">
+                <Card key={pillar.title} className="flex flex-col text-center transition-transform duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm">
                   <CardHeader className="items-center">
                     <div className="p-3 bg-primary/10 rounded-full text-primary">{pillar.icon}</div>
                     <CardTitle className="mt-4 text-xl">{pillar.title}</CardTitle>
@@ -101,7 +100,7 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn className="w-full" delay={0.5}>
-        <section className="py-24 sm:py-32 bg-primary/10">
+        <section className="py-24 sm:py-32 bg-primary/10 backdrop-blur-sm">
           <div className="container text-center max-w-3xl mx-auto">
              <h2 className="font-headline text-3xl font-medium">Meet the Team</h2>
              <p className="mt-4 text-lg text-neutral-600">
@@ -120,15 +119,15 @@ export default function Home() {
             <h2 className="font-headline text-3xl font-medium">Early Supporters</h2>
             <p className="mt-4 text-lg text-neutral-600">Support the movement and help us build the regenerative future. Your contribution directly funds our fieldwork and tool development.</p>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
-                <Card>
+                <Card className="bg-card/80 backdrop-blur-sm">
                     <CardHeader><CardTitle>Patreon</CardTitle></CardHeader>
                     <CardContent><Button asChild className="w-full"><Link href="https://www.patreon.com/BeRegen" target="_blank">Support <Heart /></Link></Button></CardContent>
                 </Card>
-                <Card>
+                <Card className="bg-card/80 backdrop-blur-sm">
                     <CardHeader><CardTitle>Giveth</CardTitle></CardHeader>
                     <CardContent><Button asChild className="w-full"><Link href="https://giveth.io/project/beregen" target="_blank">Donate <Handshake /></Link></Button></CardContent>
                 </Card>
-                <Card>
+                <Card className="bg-card/80 backdrop-blur-sm">
                     <CardHeader><CardTitle>RegenStore</CardTitle></CardHeader>
                     <CardContent><Button asChild className="w-full"><Link href="https://www.etsy.com/pt/shop/BeRegenStore" target="_blank">Shop <Bot /></Link></Button></CardContent>
                 </Card>
@@ -139,7 +138,7 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn className="w-full" delay={0.7}>
-        <section className="py-24 sm:py-32 bg-card border-y">
+        <section className="py-24 sm:py-32 bg-card/80 backdrop-blur-sm border-y">
             <div className="container text-center max-w-3xl mx-auto">
                 <h2 className="font-headline text-3xl font-medium">Get Involved</h2>
                 <p className="mt-4 text-lg text-neutral-600">

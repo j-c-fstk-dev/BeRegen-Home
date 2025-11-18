@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/common/header";
 import Footer from "@/components/common/footer";
 import "./globals.css";
+import { BackgroundGradient } from "@/components/animated/background-gradient";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://beregen.life'),
@@ -50,6 +51,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
+        <BackgroundGradient />
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 top-0 left-0 bg-primary text-primary-foreground p-4">
           Skip to main content
         </a>
