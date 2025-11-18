@@ -35,18 +35,19 @@ export const footerLinks: { title: string, links: NavLink[] }[] = [
   {
     title: 'Foundation',
     links: [
-      { name: 'About', href: '/foundation' },
-      { name: 'Roadmap', href: '/roadmap' },
-      { name: 'Transparency', href: '/transparency' },
       { name: 'Team', href: '/team' },
+      { name: 'Roadmap', href: '/roadmap' },
+      { name: 'Tech', href: '/tech' },
+      { name: 'Community', href: '/community' },
     ]
   },
   {
-    title: 'Contact',
+    title: 'Community',
     links: [
-      { name: 'hello@beregen.org', href: 'mailto:beregenerative.life@gmail.com' },
-      { name: 'Twitter: @beregen', href: 'https://x.com/beregenlife', external: true },
-      { name: 'Contact Form', href: '/contact' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Patreon', href: 'https://www.patreon.com/BeRegen', external: true },
+      { name: 'Giveth', href: 'https://giveth.io/project/beregen', external: true },
+      { name: 'Store', href: 'https://www.etsy.com/pt/shop/BeRegenStore', external: true },
     ]
   }
 ];
@@ -56,7 +57,7 @@ export const socialLinks: NavLink[] = [
     { name: 'Instagram', href: 'https://www.instagram.com/beregen.store', external: true },
     { name: 'Discord', href: 'https://t.me/Beregenerative', external: true },
     { name: 'Github', href: 'https://github.com/j-c-fstk-dev/BeRegen-Home', external: true },
-    { name: 'Patreon', href: 'https://www.patreon.com/BeRegen', external: true },
-    { name: 'Giveth', href: 'https://giveth.io/project/beregen', external: true },
-    { name: 'Etsy', href: 'https://www.etsy.com/pt/shop/BeRegenStore', external: true },
+    { name: "Patreon", href: "https://www.patreon.com/BeRegen", external: true },
+    { name: "Giveth", href: "https://giveth.io/project/beregen", external: true },
+    { name: "Etsy", href: "https://www.etsy.com/pt/shop/BeRegenStore", external: true },
 ];

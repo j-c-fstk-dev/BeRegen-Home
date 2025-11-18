@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./logo";
-import { socialLinks } from "@/lib/nav-links";
+import { footerLinks, socialLinks } from "@/lib/nav-links";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Github, Twitter, Linkedin, Send } from "lucide-react";
@@ -35,33 +35,26 @@ export default function Footer() {
                 <p>WhatsApp: <a href="tel:+5512982549745" className="hover:text-primary">+55 12 98254-9745</a></p>
              </div>
           </div>
-          <div>
-              <h4 className="font-headline font-semibold mb-4">Ecosystem</h4>
+          {footerLinks.map((section) => (
+            <div key={section.title}>
+              <h4 className="font-headline font-semibold mb-4">{section.title}</h4>
               <ul className="space-y-2">
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="/ecosystem">Ecosystem</Link></Button></li>
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="/hub">RegenHub</Link></Button></li>
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="/team">Team</Link></Button></li>
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="/roadmap">Roadmap</Link></Button></li>
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <Button
+                      variant="link"
+                      asChild
+                      className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"
+                    >
+                      <Link href={link.href} target={link.external ? "_blank" : undefined}>
+                        {link.name}
+                      </Link>
+                    </Button>
+                  </li>
+                ))}
               </ul>
             </div>
-             <div>
-              <h4 className="font-headline font-semibold mb-4">Support</h4>
-              <ul className="space-y-2">
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="https://www.patreon.com/BeRegen" target="_blank">Patreon</Link></Button></li>
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="https://giveth.io/project/beregen" target="_blank">Giveth</Link></Button></li>
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="https://www.etsy.com/pt/shop/BeRegenStore" target="_blank">Store</Link></Button></li>
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="/contact">Contact</Link></Button></li>
-              </ul>
-            </div>
-             <div>
-              <h4 className="font-headline font-semibold mb-4">Community</h4>
-              <ul className="space-y-2">
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="https://x.com/beregenlife" target="_blank">Twitter / X</Link></Button></li>
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="https://t.me/Beregenerative" target="_blank">Telegram</Link></Button></li>
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="https://github.com/j-c-fstk-dev/BeRegen-Home" target="_blank">GitHub</Link></Button></li>
-                  <li><Button variant="link" asChild className="p-0 h-auto font-normal text-muted-foreground hover:text-primary"><Link href="https://www.instagram.com/beregen.store" target="_blank">Instagram</Link></Button></li>
-              </ul>
-            </div>
+          ))}
         </div>
         <Separator className="my-8" />
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
