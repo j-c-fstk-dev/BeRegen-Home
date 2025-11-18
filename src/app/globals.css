@@ -84,8 +84,15 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-    background-image: linear-gradient(to bottom, hsl(var(--accent) / 0.5), hsl(var(--background)), hsl(var(--background)));
+    background-image: linear-gradient(
+      to bottom,
+      hsl(var(--accent) / 0.5) 0%,
+      hsl(var(--background)) 25%,
+      hsl(var(--secondary)) 75%,
+      hsl(var(--primary) / 0.3) 100%
+    );
     background-attachment: fixed;
+    background-repeat: no-repeat;
   }
   section {
     @apply w-full;
