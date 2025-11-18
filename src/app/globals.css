@@ -42,12 +42,8 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --gradient-start: hsl(180, 40%, 90%);
-    --gradient-mid-1: hsl(120, 40%, 92%);
-    --gradient-mid-2: hsl(40, 50%, 94%);
-    --gradient-end: hsl(180, 40%, 96%);
-
-    --scroll-y: 0;
+    --gradient-color-1: hsl(170, 60%, 80%);
+    --gradient-color-2: hsl(175, 50%, 90%);
   }
   .dark {
     --background: 120 10% 10%;
@@ -83,10 +79,8 @@ body {
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --gradient-start: hsl(210, 15%, 12%);
-    --gradient-mid-1: hsl(200, 15%, 15%);
-    --gradient-mid-2: hsl(190, 12%, 18%);
-    --gradient-end: hsl(210, 15%, 20%);
+    --gradient-color-1: hsl(200, 70%, 20%);
+    --gradient-color-2: hsl(205, 60%, 30%);
   }
 }
 
@@ -104,16 +98,8 @@ body {
     right: 0;
     bottom: 0;
     z-index: -10;
-    background: linear-gradient(
-      180deg,
-      var(--gradient-start) 0%,
-      var(--gradient-mid-1) 33%,
-      var(--gradient-mid-2) 66%,
-      var(--gradient-end) 100%
-    );
-    background-size: 100% 400%;
-    background-position-y: calc(var(--scroll-y) * 100%);
-    transition: background-position-y 0.1s ease-out;
+    background: linear-gradient(to bottom right, var(--gradient-color-1), var(--gradient-color-2));
+    transition: background 0.3s ease-out;
   }
   section {
     @apply w-full;

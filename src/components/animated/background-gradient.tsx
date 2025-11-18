@@ -1,20 +1,61 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
+// HSL Color arrays [H, S, L]
+const startColorLight = [170, 60, 80]; // Light Cyan Green
+const endColorLight = [200, 70, 30];   // Dark Bluish Green
+
+const startColorDark = [200, 70, 20];   // Dark Blue
+const endColorDark = [220, 60, 40];    // Lighter Blue
+
+function lerp(start: number, end: number, progress: number): number {
+  return start + (end - start) * progress;
+}
 
 export function BackgroundGradient() {
+  const rafRef = useRef<number>(0);
+  const isTicking = useRef(false);
+
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const maxScroll = document.body.scrollHeight - window.innerHeight;
-      const scrollPercent = maxScroll > 0 ? scrollY / maxScroll : 0;
-      document.documentElement.style.setProperty('--scroll-y', scrollPercent.toString());
+    const updateGradient = () => {
+      const documentHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+      const maxScroll = documentHeight - windowHeight;
+      const scrollProgress = maxScroll > 0 ? Math.min(1, window.scrollY / maxScroll) : 0;
+
+      const isDark = document.documentElement.classList.contains('dark');
+      const startColor = isDark ? startColorDark : startColorLight;
+      const endColor = isDark ? endColorDark : endColorLight;
+
+      const currentH = lerp(startColor[0], endColor[0], scrollProgress);
+      const currentS = lerp(startColor[1], endColor[1], scrollProgress);
+      const currentL = lerp(startColor[2], endColor[2], scrollProgress);
+
+      const mainColor = `hsl(${currentH}, ${currentS}%, ${currentL}%)`;
+      const secondColor = `hsl(${currentH + 5}, ${currentS - 10}%, ${currentL + 10}%)`;
+
+      document.documentElement.style.setProperty('--gradient-color-1', mainColor);
+      document.documentElement.style.setProperty('--gradient-color-2', secondColor);
+
+      isTicking.current = false;
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    const requestTick = () => {
+      if (!isTicking.current) {
+        rafRef.current = window.requestAnimationFrame(updateGradient);
+        isTicking.current = true;
+      }
+    };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+    
+    // Initial call
+    updateGradient();
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', requestTick);
+      window.cancelAnimationFrame(rafRef.current);
     };
   }, []);
 
