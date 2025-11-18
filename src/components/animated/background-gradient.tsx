@@ -33,10 +33,12 @@ export function BackgroundGradient() {
       const currentL = lerp(startColor[2], endColor[2], scrollProgress);
 
       const mainColor = `hsl(${currentH}, ${currentS}%, ${currentL}%)`;
-      const secondColor = `hsl(${currentH + 5}, ${currentS - 10}%, ${currentL + 10}%)`;
+      const lighterColor = `hsl(${currentH + 2}, ${currentS + 5}%, ${currentL + 15}%)`;
+      const darkerColor = `hsl(${currentH - 2}, ${currentS - 5}%, ${currentL - 10}%)`;
 
-      document.documentElement.style.setProperty('--gradient-color-1', mainColor);
-      document.documentElement.style.setProperty('--gradient-color-2', secondColor);
+      const gradient = `linear-gradient(135deg, ${lighterColor} 0%, ${mainColor} 50%, ${darkerColor} 100%)`
+
+      document.documentElement.style.setProperty('--gradient-background', gradient);
 
       isTicking.current = false;
     };
