@@ -1,3 +1,4 @@
+
 export type NavLink = {
   name: string;
   href: string;
@@ -42,9 +43,8 @@ export const footerLinks: { title: string, links: NavLink[] }[] = [
     ]
   },
   {
-    title: 'Community',
+    title: 'Support',
     links: [
-      { name: 'Contact', href: '/contact' },
       { name: 'Patreon', href: 'https://www.patreon.com/BeRegen', external: true },
       { name: 'Giveth', href: 'https://giveth.io/project/beregen', external: true },
       { name: 'Store', href: 'https://www.etsy.com/pt/shop/BeRegenStore', external: true },
