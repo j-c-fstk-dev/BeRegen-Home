@@ -40,6 +40,7 @@ export const footerLinks: { title: string, links: NavLink[] }[] = [
       { name: 'Roadmap', href: '/roadmap' },
       { name: 'Tech', href: '/tech' },
       { name: 'Community', href: '/community' },
+      { name: 'Contact', href: '/contact' },
     ]
   },
   {
