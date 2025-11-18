@@ -99,7 +99,6 @@ body {
     bottom: 0;
     z-index: -10;
     background: linear-gradient(to bottom right, var(--gradient-color-1), var(--gradient-color-2));
-    transition: background 0.3s ease-out;
   }
   section {
     @apply w-full;
